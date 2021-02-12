@@ -1,27 +1,30 @@
 import React from "react";
 
-export default function PiData(){
+export default function PiData(props){
+    let cpu = props.cpu;
+    let gpu = props.gpu;
+    let ram = props.ram;
     
     function getCPUData(){
         return(
             <div>
-                CPU Data
+                <h4>CPU Data: { cpu }</h4>
             </div>
         )
     };
     
-    function getMemoryData(){
+    function getGPUData(){
         return(
             <div>
-                Memory Data
+                <h4>GPU Data: { gpu }</h4>
             </div>
         )
     };
 
-    function getOtherData(){
+    function getRAMData(){
         return(
             <div>
-                Other Data
+                <h4>RAM Data: { ram }</h4>
             </div>
         )
     };
@@ -29,13 +32,13 @@ export default function PiData(){
     return(
         <div>
             <div>
-                { getCPUData() }
+                <h2> { getCPUData() } </h2>
             </div>
             <div>
-                { getMemoryData() }
+                <h2> { getGPUData() } </h2>
             </div>
             <div>
-                { getOtherData() }
+                <h2> { getRAMData() } </h2>
             </div>
         </div>
     )

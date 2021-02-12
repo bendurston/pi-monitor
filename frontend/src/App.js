@@ -1,4 +1,4 @@
-import Routes from "./Routes.js";
+import Routes from "./Routes.jsx";
 
 function App() {
   return (
